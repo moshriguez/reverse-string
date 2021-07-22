@@ -1,5 +1,9 @@
 function reverseString(str) {
-  // type your code here
+  let newStr = ''
+  for (let i=str.length-1; i>=0; i--) {
+    newStr += str[i]
+  }
+  return newStr
 }
 
 if (require.main === module) {
@@ -7,7 +11,11 @@ if (require.main === module) {
   console.log("Expecting: 'ih'");
   console.log("=>", reverseString("hi"));
 
-  console.log("");
+  console.log("Expecting: 'kcuf'");
+  console.log("=>", reverseString("fuck"));
+
+  console.log("Expecting: 'cram'");
+  console.log("=>", reverseString("marc"));
 
   console.log("Expecting: 'ybabtac'");
   console.log("=>", reverseString("catbaby"));
